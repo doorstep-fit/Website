@@ -92,13 +92,15 @@ section[id],#how{scroll-margin-top:110px}
 </div>
 </section>
 <section class="wrap section booking" id="contact">
-<div><p class="eyebrow">06 / CONSULTATION</p><h2>Make a plan<br>to move.</h2><p>Prepare a consultation brief to save for later. Online booking is currently unavailable.</p><div class="contact-cards"><article><h3>Consultation</h3><p>Choose your training goal and preferred time in the form.</p></article><article><h3>Training formats</h3><p>Explore one-to-one, partner, and online sessions.</p></article><article><h3>Location and availability</h3><p>Confirm coverage and session times before booking.</p></article></div></div>
+<div><p class="eyebrow">06 / CONSULTATION</p><h2>Make a plan<br>to move.</h2><p>Email your consultation request to T. Chandu or download a copy for later.</p><div class="contact-cards"><article><h3>Contact T. Chandu</h3><p><a href="tel:+917286023821">+91 7286 023 821</a></p><p><a href="mailto:thedoorstepfit@gmail.com">thedoorstepfit@gmail.com</a></p></article><article><h3>Training formats</h3><p>Explore one-to-one, partner, and online sessions.</p></article><article><h3>Location and availability</h3><p>Confirm coverage and session times before booking.</p></article></div></div>
 <form id="consultation">
 <label>Name<input name="name" autocomplete="name" required></label>
 <label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly training</option><option>Three-month training</option><option>Partner training</option></select></label>
 <label>Goal<select name="goal"><option>Build strength</option><option>Improve general fitness</option><option>Weight management</option><option>Build a regular routine</option><option>Improve mobility and flexibility</option></select></label>
 <label>Preferred time<select name="time"><option>Flexible</option><option>Early morning</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
 <button class="button" type="submit">Download consultation brief ↓</button>
+<button class="button" type="button" id="email-consultation">Open email draft ↗</button>
+<p>Review the draft in your email app and send it when ready.</p>
 <p id="status" role="status"></p>
 </form>
 </section>
@@ -121,6 +123,24 @@ motionButton.addEventListener('click', () => {
   const paused = artwork.toggleAttribute('data-paused');
   artwork.toggleAttribute('data-playing', !paused);
   motionButton.textContent = paused ? 'Play motion' : 'Pause motion';
+});
+const consultationForm = document.querySelector('#consultation');
+document.querySelector('#email-consultation').addEventListener('click', () => {
+  if (!consultationForm.reportValidity()) return;
+
+  const fields = new FormData(consultationForm);
+  const subject = encodeURIComponent('Doorstep fitness consultation');
+  const body = encodeURIComponent([
+    'Hello T. Chandu,',
+    '',
+    'I would like to discuss a fitness consultation.',
+    '',
+    'Name: ' + fields.get('name'),
+    'Training option: ' + fields.get('plan'),
+    'Goal: ' + fields.get('goal'),
+    'Preferred time: ' + fields.get('time'),
+  ].join('\r\n'));
+  window.location.href = 'mailto:thedoorstepfit@gmail.com?subject=' + subject + '&body=' + body;
 });
 const mobileMenu = document.querySelector('.mobile-nav');
 mobileMenu.querySelectorAll('a').forEach((link) => {
