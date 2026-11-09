@@ -7,16 +7,29 @@
 <title>TheDoorStep.fit | Personal training at home</title>
 <link rel="stylesheet" href="style.css">
 <script defer src="site.js"></script>
+<style>
+:root{--bg:#111014;--panel:#1b1920;--line:#302a37;--ink:#f9f5ff;--muted:#c3b9ca;--accent:#c89aff}
+.site-header{position:sticky;top:0;z-index:5;background:#111014;border-bottom:1px solid var(--line)}
+.site-banner{padding:7px 16px;text-align:center;background:#7029d2;color:white;font-size:.85rem;font-weight:750;letter-spacing:.03em}
+.site-header .header{border:0}.button,.mark,.top-link{background:#7029d2;color:white}.button:hover{background:#8540ea;color:white}
+.mobile-nav{display:none}.hero-art{background:radial-gradient(ellipse at 50% 45%,#482d68,#1b1529 72%)}
+.hero-art svg g{fill:#c89aff}.hero-art svg{animation:doorstep-motion 5s ease-in-out infinite}.motion-toggle{position:absolute;top:10px;right:10px;background:#21172e;color:white;border:1px solid #a97af0;border-radius:5px;padding:6px 9px;cursor:pointer}
+.hero-art[data-paused] svg{animation-play-state:paused}@keyframes doorstep-motion{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.045)}}
+.contact-cards{display:grid;gap:12px;margin:24px 0 0}.contact-cards article{padding:15px 18px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.contact-cards h3{margin:0 0 5px}.contact-cards p{margin:0}.top-link{position:fixed;bottom:14px;right:14px;z-index:4;border-radius:100%;width:42px;height:42px;display:grid;place-items:center;text-decoration:none}.top-link:hover{color:white;background:#8540ea}
+@media(prefers-reduced-motion:reduce){.hero-art:not([data-playing]) svg{animation:none}}
+@media(max-width:850px){.site-header .header{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:9px;padding-block:12px}.site-header .header>nav{display:none}.site-header .brand{font-size:clamp(.85rem,3.4vw,1.3rem);text-align:center}.site-header .small{font-size:clamp(.75rem,3vw,.95rem);text-align:center}.mobile-nav{display:block}.mobile-nav summary{list-style:none;cursor:pointer;color:var(--accent);font-size:1.3rem;padding:5px}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav nav{position:absolute;top:100%;left:0;right:0;display:grid!important;padding:14px 24px;background:#17121f;border-bottom:1px solid var(--line)}.hero-art{min-height:235px}.hero-art svg{max-height:310px}}
+section[id],#how{scroll-margin-top:110px}
+</style>
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
-<header class="wrap header">
+<div class="site-header"><div class="site-banner">Personal training at your doorstep</div><header class="wrap header"><details class="mobile-nav"><summary aria-label="Open navigation">☰</summary><nav aria-label="Mobile navigation"><a href="#how-it-works">How it works</a><a href="#services">Services</a><a href="#trainers">Trainers</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav></details>
 <a class="brand" href="#top"><span class="mark" aria-hidden="true">↗</span> TheDoorStep<span class="accent">.fit</span></a>
 <nav aria-label="Main navigation">
 <a href="#how-it-works">How it works</a><a href="#services">Services</a><a href="#trainers">Trainers</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
 </nav>
 <a class="button small" href="#contact">Plan a session ↗</a>
-</header>
+</header></div>
 <main id="main">
 <section class="wrap hero">
 <div>
@@ -25,13 +38,13 @@
 <p class="intro">Make room for movement. Explore personal training built around your goals, your space, and your schedule.</p>
 <div class="actions"><a class="button" href="#contact">Plan your first session ↗</a><a href="#how-it-works">See how it works ↓</a></div>
 </div>
-<div class="hero-art" aria-hidden="true">
-<svg viewBox="0 0 460 430" fill="none">
+<div class="hero-art">
+<svg viewBox="0 0 460 430" fill="none" aria-hidden="true">
 <path d="M67 357V73h240v284M307 73l76 44v241H307M35 357h383M35 381h383" stroke="currentColor" stroke-opacity=".36" stroke-width="2"/>
 <circle cx="224" cy="214" r="112" stroke="currentColor" stroke-opacity=".25" stroke-dasharray="4 8"/>
 <g transform="rotate(-30 226 219)" fill="#dfff59"><rect x="139" y="209" width="174" height="20" rx="5"/><rect x="143" y="176" width="24" height="86" rx="6"/><rect x="171" y="157" width="31" height="124" rx="7"/><rect x="250" y="157" width="31" height="124" rx="7"/><rect x="285" y="176" width="24" height="86" rx="6"/></g>
 </svg>
-<span>FIG. 01 &nbsp; / &nbsp; YOUR SPACE, IN MOTION</span>
+<button type="button" class="motion-toggle" hidden>Pause motion</button><span>FIG. 01 &nbsp; / &nbsp; YOUR SPACE, IN MOTION</span>
 </div>
 </section>
 <div class="ribbon"><div class="wrap">AT-HOME COACHING <span>✦</span> LIVE ONLINE SESSIONS <span>✦</span> SOLO OR WITH A PARTNER</div></div>
@@ -79,7 +92,7 @@
 </div>
 </section>
 <section class="wrap section booking" id="contact">
-<div><p class="eyebrow">06 / CONSULTATION</p><h2>Make a plan<br>to move.</h2><p>Prepare a consultation brief to save for later. Online booking is currently unavailable.</p></div>
+<div><p class="eyebrow">06 / CONSULTATION</p><h2>Make a plan<br>to move.</h2><p>Prepare a consultation brief to save for later. Online booking is currently unavailable.</p><div class="contact-cards"><article><h3>Consultation</h3><p>Choose your training goal and preferred time in the form.</p></article><article><h3>Training formats</h3><p>Explore one-to-one, partner, and online sessions.</p></article><article><h3>Location and availability</h3><p>Confirm coverage and session times before booking.</p></article></div></div>
 <form id="consultation">
 <label>Name<input name="name" autocomplete="name" required></label>
 <label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly training</option><option>Three-month training</option><option>Partner training</option></select></label>
@@ -91,5 +104,28 @@
 </section>
 </main>
 <footer class="wrap footer"><a class="brand" href="#top">TheDoorStep<span class="accent">.fit</span></a><div><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="#top">Back to top ↑</a></div></footer>
+<a href="#top" class="top-link" aria-label="Back to top">↑</a>
+<script>
+const motionButton = document.querySelector('.motion-toggle');
+const artwork = motionButton.closest('.hero-art');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+function resetMotion() {
+  artwork.removeAttribute('data-playing');
+  artwork.toggleAttribute('data-paused', reducedMotion.matches);
+  motionButton.textContent = reducedMotion.matches ? 'Play motion' : 'Pause motion';
+}
+resetMotion();
+reducedMotion.addEventListener('change', resetMotion);
+motionButton.hidden = false;
+motionButton.addEventListener('click', () => {
+  const paused = artwork.toggleAttribute('data-paused');
+  artwork.toggleAttribute('data-playing', !paused);
+  motionButton.textContent = paused ? 'Play motion' : 'Pause motion';
+});
+const mobileMenu = document.querySelector('.mobile-nav');
+mobileMenu.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => { mobileMenu.open = false; });
+});
+</script>
 </body>
 </html>
