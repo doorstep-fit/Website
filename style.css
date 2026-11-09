@@ -1,4 +1,4 @@
-:root{color-scheme:dark;--bg:#141714;--panel:#1d221b;--line:#353d32;--ink:#f4f4ec;--muted:#bac3b6;--accent:#dfff59}
+:root{color-scheme:dark;--bg:#101820;--panel:#172530;--line:#2d4353;--ink:#f3faff;--muted:#b6cbd9;--accent:#7dd3fc}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
 a{color:inherit;text-underline-offset:4px}
@@ -12,7 +12,7 @@ nav a,.brand,.button{text-decoration:none}
 .brand{font-weight:850;letter-spacing:-.045em;font-size:1.3rem;white-space:nowrap}
 .mark{display:inline-grid;place-items:center;background:var(--accent);color:var(--bg);width:1.55em;height:1.55em;border-radius:7px;margin-right:4px}
 .button{display:inline-block;background:var(--accent);color:var(--bg);border:0;border-radius:6px;padding:13px 18px;font:inherit;font-weight:780;cursor:pointer}
-.button:hover{color:var(--bg);background:#efffa4}
+.button:hover{color:var(--bg);background:#b9eaff}
 .small{padding:8px 12px}
 .hero,.trainer,.booking{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,75px);align-items:center}
 .hero{padding-block:clamp(42px,8vw,108px)}
@@ -27,7 +27,7 @@ p{color:var(--muted)}
 .eyebrow,.index,.hero-art span,.ribbon{font:700 .78rem/1.4 ui-monospace,monospace;letter-spacing:.12em}
 .eyebrow,.index{color:var(--accent)}
 .eyebrow{margin-bottom:20px}
-.hero-art{display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#425026,#20281d 66%);border:1px solid var(--line);border-radius:12px;color:var(--accent)}
+.hero-art{display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#174e6b,#102536 66%);border:1px solid var(--line);border-radius:12px;color:var(--accent)}
 .hero-art svg{width:100%;max-height:470px}
 .hero-art span{position:absolute;bottom:14px;left:16px}
 .ribbon{border-block:1px solid var(--line);padding:16px 0}
@@ -40,7 +40,7 @@ p{color:var(--muted)}
 .steps span{font:700 1.7rem ui-monospace,monospace}
 .booking form{background:var(--panel);padding:clamp(16px,4vw,36px);border:1px solid var(--line);border-radius:8px}
 label{display:block;margin-bottom:12px}
-input,select{display:block;width:100%;background:var(--bg);color:var(--ink);border:1px solid #687264;border-radius:5px;padding:9px;font:inherit}
+input,select{display:block;width:100%;background:var(--bg);color:var(--ink);border:1px solid #607f94;border-radius:5px;padding:9px;font:inherit}
 #status:empty{display:none}
 #status{margin-top:12px}
 .footer div{display:flex;flex-wrap:wrap;gap:16px}
