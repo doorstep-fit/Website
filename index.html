@@ -13,7 +13,7 @@
 <header class="wrap header">
 <a class="brand" href="#top"><span class="mark" aria-hidden="true">↗</span> TheDoorStep<span class="accent">.fit</span></a>
 <nav aria-label="Main navigation">
-<a href="#how-it-works">How it works</a><a href="#services">Services</a><a href="#trainers">Trainers</a><a href="#pricing">Pricing</a>
+<a href="#how-it-works">How it works</a><a href="#services">Services</a><a href="#trainers">Trainers</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
 </nav>
 <a class="button small" href="#contact">Plan a session ↗</a>
 </header>
@@ -35,7 +35,17 @@
 </div>
 </section>
 <div class="ribbon"><div class="wrap">AT-HOME COACHING <span>✦</span> LIVE ONLINE SESSIONS <span>✦</span> SOLO OR WITH A PARTNER</div></div>
+<section class="wrap section" id="problem">
+<p class="eyebrow">WHY TRAIN AT HOME</p><h2>Make fitness easier to fit in.</h2>
+<div class="grid four">
+<article><h3>A packed schedule</h3><p>Build your sessions around the time you already have.</p></article>
+<article><h3>A long commute</h3><p>Set aside the time you would spend travelling and use it to move.</p></article>
+<article><h3>Too many routines</h3><p>Start with movements that suit your experience and available equipment.</p></article>
+<article><h3>Hard to stay consistent</h3><p>Choose a regular time and a goal you can revisit as you progress.</p></article>
+</div>
+</section>
 <section class="wrap section" id="how-it-works">
+<div id="how"></div>
 <p class="eyebrow">02 / THE PROCESS</p><h2>From front door to first rep.</h2>
 <ol class="grid four steps">
 <li><span>01</span><h3>Pick a goal</h3><p>Tell us what you want to work on and how you like to move.</p></li>
@@ -43,9 +53,10 @@
 <li><span>03</span><h3>Find your starting point</h3><p>Use the first session to get familiar with the movements and set a baseline.</p></li>
 <li><span>04</span><h3>Build your rhythm</h3><p>Make time for regular sessions and adjust the plan as you progress.</p></li>
 </ol>
+<p><a href="#services">Explore training options ↗</a></p>
 </section>
 <section class="wrap section" id="services">
-<p class="eyebrow">03 / SERVICES</p><h2>Ways to train.</h2>
+<p class="eyebrow">03 / SERVICES</p><h2>Ways to train.</h2><p>Choose a format that fits your space, schedule, and training goals.</p>
 <div class="grid four">
 <article><span class="index">01 / HOME</span><h3>Personal training</h3><p>One-to-one workouts designed for the space and equipment you have.</p></article>
 <article><span class="index">02 / ONLINE</span><h3>Live online coaching</h3><p>Train over video with real-time guidance from wherever you are.</p></article>
@@ -55,16 +66,16 @@
 </section>
 <section class="wrap section trainer" id="trainers">
 <div><p class="eyebrow">04 / COACHING</p><h2>Find your fit.</h2></div>
-<div><p>Start by sharing your goals and preferred training format. Use the consultation to ask how a coach would structure your first few sessions and adapt movements to your space.</p><a href="#contact">Prepare for a consultation ↗</a></div>
+<div><p>Start by sharing your goals and preferred training format. Use the consultation to ask how a coach would structure your first few sessions and adapt movements to your space.</p><a href="#contact">Prepare for a consultation ↗</a><p>Ask about coaching experience, relevant qualifications, and how progress would be tracked. Individual trainer profiles are pending confirmation.</p></div>
 </section>
 <section class="wrap section" id="pricing">
 <p class="eyebrow">05 / TRAINING OPTIONS</p><h2>Choose your starting point.</h2>
 <p>Explore the proposed formats below. Rates and availability are pending confirmation.</p>
 <div class="grid four">
-<article><h3>Trial session</h3><p>Try a single guided workout.</p><a href="#contact" data-plan="Trial session">Select trial ↗</a></article>
-<article><h3>Monthly training</h3><p>Make individual coaching part of your weekly routine.</p><a href="#contact" data-plan="Monthly training">Select monthly ↗</a></article>
-<article><h3>Three-month training</h3><p>Set a longer training window to work toward a specific goal.</p><a href="#contact" data-plan="Three-month training">Select three months ↗</a></article>
-<article><h3>Partner training</h3><p>Share sessions with a partner and work at your own pace.</p><a href="#contact" data-plan="Partner training">Select partner ↗</a></article>
+<article><h3>Trial session</h3><p>Try a single guided workout.</p><ul><li>Discuss your goals</li><li>Try foundational movements</li><li>Plan a next step</li></ul><a href="#contact" data-plan="Trial session">Select trial ↗</a></article>
+<article><h3>Monthly training</h3><p>Make individual coaching part of your weekly routine.</p><ul><li>Regular solo sessions</li><li>A consistent training schedule</li><li>Progress reviews</li></ul><a href="#contact" data-plan="Monthly training">Select monthly ↗</a></article>
+<article><h3>Three-month training</h3><p>Set a longer training window to work toward a specific goal.</p><ul><li>Longer coaching window</li><li>Milestones along the way</li><li>Adjustments as you progress</li></ul><a href="#contact" data-plan="Three-month training">Select three months ↗</a></article>
+<article><h3>Partner training</h3><p>Share sessions with a partner and work at your own pace.</p><ul><li>Two people per session</li><li>Shared session times</li><li>Options for different levels</li></ul><a href="#contact" data-plan="Partner training">Select partner ↗</a></article>
 </div>
 </section>
 <section class="wrap section booking" id="contact">
@@ -72,8 +83,8 @@
 <form id="consultation">
 <label>Name<input name="name" autocomplete="name" required></label>
 <label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly training</option><option>Three-month training</option><option>Partner training</option></select></label>
-<label>Goal<select name="goal"><option>Build strength</option><option>Improve general fitness</option><option>Weight management</option><option>Build a regular routine</option></select></label>
-<label>Preferred time<select name="time"><option>Flexible</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
+<label>Goal<select name="goal"><option>Build strength</option><option>Improve general fitness</option><option>Weight management</option><option>Build a regular routine</option><option>Improve mobility and flexibility</option></select></label>
+<label>Preferred time<select name="time"><option>Flexible</option><option>Early morning</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
 <button class="button" type="submit">Download consultation brief ↓</button>
 <p id="status" role="status"></p>
 </form>
