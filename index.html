@@ -40,6 +40,12 @@ section[id],#how{scroll-margin-top:110px}
 .faq-list details { margin-top: 12px; padding: 14px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
 .faq-list summary { cursor: pointer; font-weight: 700; }
 .faq-list p { margin: 8px 0 0; }
+.plan-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.plan-grid article { display: flex; flex-direction: column; }
+.plan-price strong { color: var(--accent); font-size: 1.8rem; }
+.plan-price span { display: block; }
+.plan-grid ul { padding-inline-start: 1.25em; }
+.plan-grid .button { margin-top: auto; text-align: center; }
 </style>
 </head>
 <body id="top">
@@ -59,7 +65,7 @@ section[id],#how{scroll-margin-top:110px}
 <p class="eyebrow">01 / PERSONAL TRAINING AT HOME</p>
 <h1>Personal training at home in <em>Hyderabad</em></h1>
 <p class="intro">Build strength and stay consistent with coaching that fits your schedule. Designed for busy professionals and people getting back into fitness.</p>
-<div class="actions"><a class="button" href="#contact">Ask about a trial on WhatsApp ↗</a><a href="#how-it-works">See how it works ↓</a></div>
+<div class="actions"><a class="button" href="#contact" data-plan="Trial session">Ask about a free trial on WhatsApp ↗</a><a href="#how-it-works">See how it works ↓</a></div>
 </div>
 <div class="hero-art">
 <svg viewBox="0 0 460 430" fill="none" aria-hidden="true">
@@ -107,13 +113,39 @@ section[id],#how{scroll-margin-top:110px}
 <div><p>Start by sharing your goals and preferred training format. Use the consultation to ask how a coach would structure your first few sessions and adapt movements to your space.</p><a href="#contact">Prepare for a consultation ↗</a><p>Ask about coaching experience, relevant qualifications, and how progress would be tracked. Individual trainer profiles are pending confirmation.</p></div>
 </section>
 <section class="wrap section" id="pricing">
-<p class="eyebrow">05 / TRAINING OPTIONS</p><h2>Choose your starting point.</h2>
-<p>Explore the proposed formats below. Rates and availability are pending confirmation.</p>
-<div class="grid four">
-<article><h3>Trial session</h3><p>Try a single guided workout.</p><ul><li>Discuss your goals</li><li>Try foundational movements</li><li>Plan a next step</li></ul><a href="#contact" data-plan="Trial session">Select trial ↗</a></article>
-<article><h3>Monthly training</h3><p>Make individual coaching part of your weekly routine.</p><ul><li>Regular solo sessions</li><li>A consistent training schedule</li><li>Progress reviews</li></ul><a href="#contact" data-plan="Monthly training">Select monthly ↗</a></article>
-<article><h3>Three-month training</h3><p>Set a longer training window to work toward a specific goal.</p><ul><li>Longer coaching window</li><li>Milestones along the way</li><li>Adjustments as you progress</li></ul><a href="#contact" data-plan="Three-month training">Select three months ↗</a></article>
-<article><h3>Partner training</h3><p>Share sessions with a partner and work at your own pace.</p><ul><li>Two people per session</li><li>Shared session times</li><li>Options for different levels</li></ul><a href="#contact" data-plan="Partner training">Select partner ↗</a></article>
+<h2>Training plans and prices</h2>
+<p>Start with a free trial at home, or choose a training plan and ask about available slots on WhatsApp.</p>
+<div class="grid plan-grid">
+<article>
+<h3>Trial session</h3>
+<p class="plan-price"><strong>Free</strong> <span>one at-home session</span></p>
+<ul><li>Fitness assessment</li><li>Personalised workout preview</li><li>No long-term commitment</li></ul>
+<a class="button" href="#contact" data-plan="Trial session">Request free trial ↗</a>
+</article>
+<article>
+<h3>Monthly training</h3>
+<p class="plan-price"><strong>₹11,999</strong> <span>per month</span></p>
+<ul><li>16 one-to-one sessions</li><li>Sessions scheduled on alternate days</li><li>Dedicated certified trainer</li><li>Nutrition guidance</li><li>WhatsApp support</li><li>Custom workout plan</li><li>Progress tracking</li></ul>
+<a class="button" href="#contact" data-plan="Monthly training">Enquire about monthly training ↗</a>
+</article>
+<article>
+<h3>Three-month training</h3>
+<p class="plan-price"><strong>₹27,999</strong> <span>for 3 months</span></p>
+<ul><li>48 one-to-one sessions</li><li>Sessions scheduled on alternate days</li><li>Dedicated certified trainer</li><li>Nutrition guidance</li><li>WhatsApp support</li><li>Custom workout plan</li><li>Progress tracking</li></ul>
+<a class="button" href="#contact" data-plan="Three-month training">Enquire about three months ↗</a>
+</article>
+<article>
+<h3>Couple pack</h3>
+<p class="plan-price"><strong>₹17,999</strong> <span>per month</span></p>
+<ul><li>16 sessions for two people</li><li>Sessions scheduled on alternate days</li><li>Dedicated certified trainer</li><li>Nutrition guidance</li><li>WhatsApp support</li><li>Shared sessions with personalised plans</li><li>Progress tracking for both</li></ul>
+<a class="button" href="#contact" data-plan="Couple pack">Enquire about couple training ↗</a>
+</article>
+<article>
+<h3>Couple pack (3 months)</h3>
+<p class="plan-price"><strong>₹49,999</strong> <span>for 3 months</span></p>
+<ul><li>Three months of training for two people</li><li>Sessions scheduled on alternate days</li><li>Dedicated certified trainer</li><li>Nutrition guidance</li><li>WhatsApp support</li><li>Shared sessions with personalised plans</li><li>Progress tracking for both</li></ul>
+<a class="button" href="#contact" data-plan="Couple pack (3 months)">Enquire about three-month couple training ↗</a>
+</article>
 </div>
 </section>
 <section class="wrap section" id="faq" aria-labelledby="faq-title">
@@ -122,7 +154,7 @@ section[id],#how{scroll-margin-top:110px}
 <details><summary>Do I need gym equipment at home?</summary><p>Tell us what equipment and space you have when you enquire. We can discuss how to adapt the session to your setup.</p></details>
 <details><summary>Can I start as a beginner?</summary><p>Yes. Share your experience and goals so the first session can start at a pace that suits you.</p></details>
 <details><summary>Which areas do you cover?</summary><p>We offer at-home training in Hyderabad. Include your neighbourhood or PIN code in your WhatsApp enquiry so we can confirm availability.</p></details>
-<details><summary>Can I train with a partner?</summary><p>Yes. Choose Partner training in the form to ask about sessions for two people.</p></details>
+<details><summary>Can I train with a partner?</summary><p>Yes. Choose either Couple pack in the form to ask about sessions for two people.</p></details>
 </div>
 </section>
 <section class="wrap section booking" id="contact">
@@ -130,7 +162,7 @@ section[id],#how{scroll-margin-top:110px}
 <form id="consultation">
 <label>Name<input name="name" autocomplete="name" required></label>
 <label>Neighbourhood or PIN code for WhatsApp (optional)<input name="area" maxlength="100" placeholder="e.g. Kondapur"></label>
-<label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly training</option><option>Three-month training</option><option>Partner training</option></select></label>
+<label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly training</option><option>Three-month training</option><option>Couple pack</option><option>Couple pack (3 months)</option></select></label>
 <label>Goal<select name="goal"><option>Build strength</option><option>Improve general fitness</option><option>Weight management</option><option>Build a regular routine</option><option>Improve mobility and flexibility</option></select></label>
 <label>Preferred time<select name="time"><option>Flexible</option><option>Early morning</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
 <button class="button" type="submit">Download consultation brief ↓</button>
