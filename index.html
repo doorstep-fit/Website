@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="style.css">
 <script defer src="site.js?v=enquiry"></script>
 <style>
-:root{--bg:#101820;--panel:#172530;--line:#2d4353;--ink:#f3faff;--muted:#b6cbd9;--accent:#7dd3fc}
-.site-header{position:sticky;top:0;z-index:5;background:#101820;border-bottom:1px solid var(--line)}
+:root{--bg:#103a52;--panel:#103a52;--line:#41657a;--ink:#f3faff;--muted:#b6cbd9;--accent:#7dd3fc}
+.site-header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
 .site-banner{padding:7px 16px;text-align:center;background:#036a9e;color:white;font-size:.85rem;font-weight:750;letter-spacing:.03em}
 .site-header .header{border:0}.button,.mark,.top-link{background:#036a9e;color:white}.button:hover{background:#0875a6;color:white}
 .mobile-nav{display:none}
@@ -18,9 +18,9 @@
 section[id],#how{scroll-margin-top:110px}
 .site-header .brand { display: flex; align-items: center; justify-content: center; min-width: 0; }
 .site-header .brand img { display: block; width: min(100%, 198px); height: auto; }
-.hero-scene { position: relative; isolation: isolate; overflow: hidden; background: #101820; }
+.hero-scene { position: relative; isolation: isolate; overflow: hidden; background: var(--bg); }
 .hero-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
-.hero-scene::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,24,32,.94), rgba(16,24,32,.62)); z-index: -1; }
+.hero-scene::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,58,82,.94), rgba(16,58,82,.62)); z-index: -1; }
 .hero-scene .hero { grid-template-columns: minmax(0, 660px); }
 .faq-list { max-width: 760px; }
 .faq-list details { margin-top: 12px; padding: 14px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
@@ -49,7 +49,7 @@ section[id],#how{scroll-margin-top:110px}
   20%, 100% { visibility: hidden; opacity: 0; }
 }
 .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-#problem article, #how-it-works .steps li { background: #103a52; color: var(--ink); }
+#problem article, #how-it-works .steps li { background: var(--panel); color: var(--ink); }
 #problem article p, #how-it-works .steps p { color: inherit; }
 @media (max-width: 480px) {
   .benefit-grid { grid-template-columns: minmax(0, 1fr); }
@@ -108,7 +108,7 @@ section[id],#how{scroll-margin-top:110px}
   height: 44px;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: #103a52;
+  background: var(--panel);
 }
 @media (min-width: 1000px) {
   .wrap { width: auto; max-width: none; margin-inline: clamp(20px, 2vw, 40px); }
