@@ -12,30 +12,16 @@
 .site-header{position:sticky;top:0;z-index:5;background:#101820;border-bottom:1px solid var(--line)}
 .site-banner{padding:7px 16px;text-align:center;background:#036a9e;color:white;font-size:.85rem;font-weight:750;letter-spacing:.03em}
 .site-header .header{border:0}.button,.mark,.top-link{background:#036a9e;color:white}.button:hover{background:#0875a6;color:white}
-.mobile-nav{display:none}.hero-art{background:radial-gradient(ellipse at 50% 45%,#174e6b,#102536 72%)}
-.hero-art svg g{fill:#7dd3fc}
+.mobile-nav{display:none}
 .contact-cards{display:grid;gap:12px;margin:24px 0 0}.contact-cards article{padding:15px 18px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}.contact-cards h3{margin:0 0 5px}.contact-cards p{margin:0}.top-link{position:fixed;bottom:14px;right:14px;z-index:4;border-radius:100%;width:42px;height:42px;display:grid;place-items:center;text-decoration:none}.top-link:hover{color:white;background:#0875a6}
-.hero-art video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; }
-.hero-art[data-video-ready] video { opacity: 1; }
-.hero-art[data-video-ready] svg { visibility: hidden; }
-.hero-art span { z-index: 1; }
-.hero-art span { background: #101820; border-radius: 4px; padding: 4px 8px; }
-@media(max-width:850px){.site-header .header{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:9px;padding-block:12px}.site-header .header>nav{display:none}.site-header .brand{font-size:clamp(.85rem,3.4vw,1.3rem);text-align:center}.site-header .small{font-size:clamp(.75rem,3vw,.95rem);text-align:center}.mobile-nav{display:block}.mobile-nav summary{list-style:none;cursor:pointer;color:var(--accent);font-size:1.3rem;padding:5px}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav nav{position:absolute;top:100%;left:0;right:0;display:grid!important;padding:14px 24px;background:#13222e;border-bottom:1px solid var(--line)}.hero-art{min-height:235px}.hero-art svg{max-height:310px}}
+@media(max-width:850px){.site-header .header{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:9px;padding-block:12px}.site-header .header>nav{display:none}.site-header .brand{font-size:clamp(.85rem,3.4vw,1.3rem);text-align:center}.site-header .small{font-size:clamp(.75rem,3vw,.95rem);text-align:center}.mobile-nav{display:block}.mobile-nav summary{list-style:none;cursor:pointer;color:var(--accent);font-size:1.3rem;padding:5px}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav nav{position:absolute;top:100%;left:0;right:0;display:grid!important;padding:14px 24px;background:#13222e;border-bottom:1px solid var(--line)}}
 section[id],#how{scroll-margin-top:110px}
 .site-header .brand { display: flex; align-items: center; justify-content: center; min-width: 0; }
 .site-header .brand img { display: block; width: min(100%, 198px); height: auto; }
 .hero-scene { position: relative; isolation: isolate; overflow: hidden; background: #101820; }
 .hero-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
 .hero-scene::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,24,32,.94), rgba(16,24,32,.62)); z-index: -1; }
-.hero-art {
-  justify-self: center;
-  width: min(100%, 266px);
-  min-height: 0;
-  aspect-ratio: 9 / 16;
-  box-sizing: content-box;
-  max-width: calc(100% - 2px);
-}
-.hero-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-scene .hero { grid-template-columns: minmax(0, 660px); }
 .faq-list { max-width: 760px; }
 .faq-list details { margin-top: 12px; padding: 14px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
 .faq-list summary { cursor: pointer; font-weight: 700; }
@@ -62,19 +48,9 @@ section[id],#how{scroll-margin-top:110px}
 <video class="hero-background" src="hero-background.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
 <section class="wrap hero">
 <div>
-<p class="eyebrow">01 / PERSONAL TRAINING AT HOME</p>
 <h1>Personal training at home in <em>Hyderabad</em></h1>
 <p class="intro">Build strength and stay consistent with coaching that fits your schedule. Designed for busy professionals and people getting back into fitness.</p>
 <div class="actions"><a class="button" href="#contact" data-plan="Trial session">Ask about a free trial on WhatsApp ↗</a><a href="#how-it-works">See how it works ↓</a></div>
-</div>
-<div class="hero-art">
-<svg viewBox="0 0 460 430" fill="none" aria-hidden="true">
-<path d="M67 357V73h240v284M307 73l76 44v241H307M35 357h383M35 381h383" stroke="currentColor" stroke-opacity=".36" stroke-width="2"/>
-<circle cx="224" cy="214" r="112" stroke="currentColor" stroke-opacity=".25" stroke-dasharray="4 8"/>
-<g transform="rotate(-30 226 219)" fill="#dfff59"><rect x="139" y="209" width="174" height="20" rx="5"/><rect x="143" y="176" width="24" height="86" rx="6"/><rect x="171" y="157" width="31" height="124" rx="7"/><rect x="250" y="157" width="31" height="124" rx="7"/><rect x="285" y="176" width="24" height="86" rx="6"/></g>
-</svg>
-<video src="hero-video.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
-
 </div>
 </section>
 </div>
@@ -218,17 +194,6 @@ section[id],#how{scroll-margin-top:110px}
 <footer class="wrap footer"><a class="brand" href="#top">TheDoorStep<span class="accent">.fit</span></a><div><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="#top">Back to top ↑</a></div></footer>
 <a href="#top" class="top-link" aria-label="Back to top">↑</a>
 <script>
-const artwork = document.querySelector('.hero-art');
-const heroVideo = artwork.querySelector('video');
-
-function showHeroVideo() {
-  artwork.setAttribute('data-video-ready', '');
-}
-
-heroVideo.addEventListener('loadeddata', showHeroVideo);
-if (heroVideo.readyState >= 2) showHeroVideo();
-heroVideo.addEventListener('error', () => artwork.removeAttribute('data-video-ready'));
-
 const consultationForm = document.querySelector('#consultation');
 document.querySelector('#whatsapp-consultation').addEventListener('click', () => {
   if (!consultationForm.reportValidity()) return;
