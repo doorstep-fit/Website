@@ -1,4 +1,4 @@
-:root{color-scheme:dark;--bg:#103a52;--panel:#103a52;--line:#41657a;--ink:#f3faff;--muted:#b6cbd9;--accent:#7dd3fc}
+:root{color-scheme:dark;--bg:#101820;--panel:#172530;--line:#2d4353;--ink:#f3faff;--muted:#b6cbd9;--accent:#7dd3fc}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,sans-serif}
 a{color:inherit;text-underline-offset:4px}
