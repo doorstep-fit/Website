@@ -86,6 +86,15 @@ section[id],#how{scroll-margin-top:110px}
   background: linear-gradient(105deg, #743298, #bd224f, #a94413);
 }
 .instagram-link:hover { background: linear-gradient(105deg, #632785, #a91d45, #963b10); }
+.whatsapp-message { display: block; margin: 20px 0 6px; }
+#whatsapp-message { width: 100%; }
+#contact .whatsapp-link, #contact .instagram-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+#contact .button svg { width: 20px; height: 20px; flex-shrink: 0; }
 </style>
 </head>
 <body id="top">
@@ -253,8 +262,14 @@ section[id],#how{scroll-margin-top:110px}
 </section>
 <section class="wrap section booking" id="contact">
 <div><h2>Make a plan<br>to move.</h2><p>Send your enquiry to Doorstep Fitness on WhatsApp.</p><div class="contact-cards"><article><h3>Contact us</h3><p><a href="tel:+917286023821">+91 7286 023 821</a></p><p><a href="mailto:thedoorstepfit@gmail.com">thedoorstepfit@gmail.com</a></p></article><article><h3>Training formats</h3><p>Explore one-to-one, partner, and online sessions.</p></article><article><h3>Service area</h3><p>We offer at-home training in Hyderabad. Ask about availability in your neighbourhood.</p></article></div>
-<a class="button whatsapp-link" href="https://wa.me/917286023821">Chat on WhatsApp</a>
-<a class="button instagram-link" href="https://www.instagram.com/doorstep.fit?srtk=c2N1NTZ2dGFwaGpj&amp;utm_source=qr">Follow on Instagram</a>
+<label class="whatsapp-message" for="whatsapp-message">Choose a WhatsApp message</label>
+<select id="whatsapp-message">
+  <option value="Hi Doorstep Fitness! I'd like to know more about personal training at home in Hyderabad.">General enquiry</option>
+  <option value="Hi Doorstep Fitness! I'd like to book a free trial session.">Book a free trial</option>
+  <option value="Hi Doorstep Fitness! Could you share your training plans and pricing?">Ask about pricing</option>
+</select>
+<a class="button whatsapp-link" href="https://wa.me/917286023821?text=Hi%20Doorstep%20Fitness!%20I%27d%20like%20to%20know%20more%20about%20personal%20training%20at%20home%20in%20Hyderabad."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 11.7a8.8 8.8 0 0 1-13 7.8L3 21l1.5-4.7a8.8 8.8 0 1 1 16.3-4.6Z"/><path fill="currentColor" stroke="none" d="M9.1 7.2c-.4-.5-1.2-.4-1.5.1-.6.8-.6 1.8 0 3 1 2.3 3 4.3 5.4 5.3 1.1.5 2.3.4 3-.4.4-.4.5-1.1 0-1.4l-1.8-.9c-.4-.2-.7-.1-1 .2l-.5.7c-1.5-.6-2.7-1.8-3.3-3.3l.7-.6c.3-.2.4-.5.2-.9Z"/></svg> Chat on WhatsApp</a>
+<a class="button instagram-link" href="https://www.instagram.com/doorstep.fit?srtk=c2N1NTZ2dGFwaGpj&amp;utm_source=qr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Follow on Instagram</a>
 </div>
 <form id="consultation">
 <label>Name<input name="name" autocomplete="name" required></label>
@@ -288,6 +303,16 @@ consultationForm.addEventListener('submit', (event) => {
   ].join('\r\n'));
   window.location.href = 'https://wa.me/917286023821?text=' + body;
 });
+const whatsappMessage = document.querySelector('#whatsapp-message');
+const whatsappLink = document.querySelector('.whatsapp-link');
+function updateWhatsAppDraft() {
+  const url = new URL(whatsappLink.href);
+  url.searchParams.set('text', whatsappMessage.value);
+  whatsappLink.href = url.href;
+}
+whatsappMessage.addEventListener('change', updateWhatsAppDraft);
+whatsappLink.addEventListener('click', updateWhatsAppDraft);
+
 const mobileMenu = document.querySelector('.mobile-nav');
 mobileMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => { mobileMenu.open = false; });
