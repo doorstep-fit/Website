@@ -6,7 +6,7 @@
 <meta name="description" content="Explore at-home personal training in Hyderabad, strength coaching, and live online workouts with TheDoorStep.fit.">
 <title>Home Personal Training in Hyderabad | TheDoorStep.fit</title>
 <link rel="stylesheet" href="style.css">
-<script defer src="site.js"></script>
+<script defer src="site.js?v=enquiry"></script>
 <style>
 :root{--bg:#101820;--panel:#172530;--line:#2d4353;--ink:#f3faff;--muted:#b6cbd9;--accent:#7dd3fc}
 .site-header{position:sticky;top:0;z-index:5;background:#101820;border-bottom:1px solid var(--line)}
@@ -234,17 +234,15 @@ section[id],#how{scroll-margin-top:110px}
 </div>
 </section>
 <section class="wrap section booking" id="contact">
-<div><p class="eyebrow">06 / CONSULTATION</p><h2>Make a plan<br>to move.</h2><p>Send your enquiry to Doorstep Fitness on WhatsApp or download a copy for later.</p><div class="contact-cards"><article><h3>Contact us</h3><p><a href="tel:+917286023821">+91 7286 023 821</a></p><p><a href="mailto:thedoorstepfit@gmail.com">thedoorstepfit@gmail.com</a></p></article><article><h3>Training formats</h3><p>Explore one-to-one, partner, and online sessions.</p></article><article><h3>Service area</h3><p>We offer at-home training in Hyderabad. Ask about availability in your neighbourhood.</p></article></div></div>
+<div><p class="eyebrow">06 / CONSULTATION</p><h2>Make a plan<br>to move.</h2><p>Send your enquiry to Doorstep Fitness on WhatsApp.</p><div class="contact-cards"><article><h3>Contact us</h3><p><a href="tel:+917286023821">+91 7286 023 821</a></p><p><a href="mailto:thedoorstepfit@gmail.com">thedoorstepfit@gmail.com</a></p></article><article><h3>Training formats</h3><p>Explore one-to-one, partner, and online sessions.</p></article><article><h3>Service area</h3><p>We offer at-home training in Hyderabad. Ask about availability in your neighbourhood.</p></article></div></div>
 <form id="consultation">
 <label>Name<input name="name" autocomplete="name" required></label>
 <label>Neighbourhood or PIN code for WhatsApp (optional)<input name="area" maxlength="100" placeholder="e.g. Kondapur"></label>
 <label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly Pack</option><option>3 Months Pack</option><option>Couple pack</option><option>Couple pack (3 months)</option></select></label>
-<label>Goal<select name="goal"><option>Build strength</option><option>Improve general fitness</option><option>Weight management</option><option>Build a regular routine</option><option>Improve mobility and flexibility</option></select></label>
+<label>Goal<select name="goal"><option>Build strength</option><option>Improve general fitness</option><option>Weight management</option><option>Build a regular routine</option><option>Improve mobility and flexibility</option><option>Post-injury recovery</option></select></label>
 <label>Preferred time<select name="time"><option>Flexible</option><option>Early morning</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
-<button class="button" type="submit">Download consultation brief ↓</button>
-<button class="button" type="button" id="whatsapp-consultation">Continue to WhatsApp ↗</button>
+<button class="button" type="submit">Submit your enquiry</button>
 <p>Review your enquiry in WhatsApp and tap Send when ready.</p>
-<p id="status" role="status"></p>
 </form>
 </section>
 </main>
@@ -252,8 +250,8 @@ section[id],#how{scroll-margin-top:110px}
 <a href="#top" class="top-link" aria-label="Back to top">↑</a>
 <script>
 const consultationForm = document.querySelector('#consultation');
-document.querySelector('#whatsapp-consultation').addEventListener('click', () => {
-  if (!consultationForm.reportValidity()) return;
+consultationForm.addEventListener('submit', (event) => {
+  event.preventDefault();
 
   const fields = new FormData(consultationForm);
   const body = encodeURIComponent([
