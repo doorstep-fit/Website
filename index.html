@@ -48,11 +48,11 @@ section[id],#how{scroll-margin-top:110px}
   2%, 18% { visibility: visible; opacity: 1; }
   20%, 100% { visibility: hidden; opacity: 0; }
 }
-#problem .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-#problem article { background: #103a52; color: var(--ink); }
-#problem article p { color: inherit; }
+.benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#problem article, #how-it-works .steps li { background: #103a52; color: var(--ink); }
+#problem article p, #how-it-works .steps p { color: inherit; }
 @media (max-width: 480px) {
-  #problem .benefit-grid { grid-template-columns: minmax(0, 1fr); }
+  .benefit-grid { grid-template-columns: minmax(0, 1fr); }
 }
 </style>
 </head>
@@ -94,12 +94,12 @@ section[id],#how{scroll-margin-top:110px}
 </section>
 <section class="wrap section" id="how-it-works">
 <div id="how"></div>
-<p class="eyebrow">02 / THE PROCESS</p><h2>From front door to first rep.</h2>
-<ol class="grid four steps">
-<li><span>01</span><h3>Pick a goal</h3><p>Tell us what you want to work on and how you like to move.</p></li>
-<li><span>02</span><h3>Talk through your routine</h3><p>Discuss your experience, space, equipment and availability.</p></li>
-<li><span>03</span><h3>Find your starting point</h3><p>Use the first session to get familiar with the movements and set a baseline.</p></li>
-<li><span>04</span><h3>Build your rhythm</h3><p>Make time for regular sessions and adjust the plan as you progress.</p></li>
+<h2>From front door to first rep.</h2>
+<ol class="grid benefit-grid steps">
+<li><span aria-hidden="true">01</span><h3>Tell us your goals</h3><p>Share what you want to achieve and what matters to you.</p></li>
+<li><span aria-hidden="true">02</span><h3>Meet your trainer</h3><p>Discuss your fitness level, schedule and available space.</p></li>
+<li><span aria-hidden="true">03</span><h3>Start with confidence</h3><p>Begin with guided workouts designed around your needs.</p></li>
+<li><span aria-hidden="true">04</span><h3>Build your routine</h3><p>Stay consistent, track progress and keep improving.</p></li>
 </ol>
 <p><a href="#services">Explore training options ↗</a></p>
 </section>
