@@ -54,6 +54,21 @@ section[id],#how{scroll-margin-top:110px}
 @media (max-width: 480px) {
   .benefit-grid { grid-template-columns: minmax(0, 1fr); }
 }
+.services-list {
+  padding-inline: clamp(16px, 4vw, 32px);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.services-list article {
+  padding: 24px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.services-list article + article { border-top: 1px solid var(--line); }
+.services-list .index { color: var(--accent); }
+.services-list p { margin-bottom: 0; }
 </style>
 </head>
 <body id="top">
@@ -103,12 +118,38 @@ section[id],#how{scroll-margin-top:110px}
 <p><a class="button" href="#services">Explore training options</a></p>
 </section>
 <section class="wrap section" id="services">
-<p class="eyebrow">03 / SERVICES</p><h2>Ways to train.</h2><p>Choose a format that fits your space, schedule, and training goals.</p>
-<div class="grid four">
-<article><span class="index">01 / HOME</span><h3>Personal training</h3><p>One-to-one workouts designed for the space and equipment you have.</p></article>
-<article><span class="index">02 / ONLINE</span><h3>Live online coaching</h3><p>Train over video with real-time guidance from wherever you are.</p></article>
-<article><span class="index">03 / CONDITIONING</span><h3>Weight management</h3><p>Build a consistent movement routine with a mix of strength and conditioning.</p></article>
-<article><span class="index">04 / STRENGTH</span><h3>Strength coaching</h3><p>Work on technique and progress your exercises at a pace that suits you.</p></article>
+<h2>Ways to train.</h2><p>Choose a format that fits your space, schedule, and training goals.</p>
+<div class="services-list">
+<article>
+  <span class="index">01 / PERSONAL TRAINING</span>
+  <h3>1-on-1 Personal Training</h3>
+  <p>Personalised workout sessions designed around your fitness goals, schedule and experience.</p>
+</article>
+<article>
+  <span class="index">02 / WEDDING FITNESS</span>
+  <h3>Wedding Fitness Program</h3>
+  <p>Follow a structured fitness routine to feel stronger, fitter and more confident for your special day.</p>
+</article>
+<article>
+  <span class="index">03 / FAT LOSS</span>
+  <h3>Online Fat Loss Coaching</h3>
+  <p>Build sustainable habits with guided workouts, regular check-ins and progress tracking.</p>
+</article>
+<article>
+  <span class="index">04 / STRENGTH</span>
+  <h3>1-on-1 Online Strength Coaching</h3>
+  <p>Improve strength, exercise technique and performance with personalised online guidance.</p>
+</article>
+<article>
+  <span class="index">05 / 12-WEEK PROGRAM</span>
+  <h3>12-Week Strength Program</h3>
+  <p>Follow a progressive training plan designed to build strength and improve overall fitness.</p>
+</article>
+<article>
+  <span class="index">06 / NUTRITION</span>
+  <h3>Nutrition Coaching</h3>
+  <p>Get practical nutrition guidance to support your training goals and everyday lifestyle.</p>
+</article>
 </div>
 </section>
 <section class="wrap section trainer" id="trainers">
