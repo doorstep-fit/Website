@@ -32,6 +32,22 @@ section[id],#how{scroll-margin-top:110px}
 .plan-price span { display: block; }
 .plan-grid ul { padding-inline-start: 1.25em; }
 .plan-grid .button { margin-top: auto; text-align: center; }
+.hero-quotes { display: grid; }
+.hero-quotes span {
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+.hero-quotes span:first-child { visibility: visible; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-quotes span {
+    animation: hero-quote 10s linear var(--quote-delay) infinite;
+  }
+}
+@keyframes hero-quote {
+  0% { visibility: visible; opacity: 0; }
+  2%, 18% { visibility: visible; opacity: 1; }
+  20%, 100% { visibility: hidden; opacity: 0; }
+}
 </style>
 </head>
 <body id="top">
@@ -49,7 +65,13 @@ section[id],#how{scroll-margin-top:110px}
 <section class="wrap hero">
 <div>
 <h1>Personal Training at Your <em>Doorstep</em></h1>
-<p class="intro">Build strength and stay consistent with coaching that fits your schedule. Designed for busy professionals and people getting back into fitness.</p>
+<p class="intro hero-quotes">
+  <span style="--quote-delay: 0s">Your Fitness. Your Home. Your Schedule.</span>
+  <span style="--quote-delay: 2s">Personal Training. Right At Home.</span>
+  <span style="--quote-delay: 4s">Build Strength Without Gym Travel.</span>
+  <span style="--quote-delay: 6s">It's Never Too Late To Start.</span>
+  <span style="--quote-delay: 8s">A Healthier You Starts At Home.</span>
+</p>
 <div class="actions"><a class="button" href="#contact" data-plan="Trial session">Ask about a free trial on WhatsApp ↗</a><a href="#how-it-works">See how it works ↓</a></div>
 </div>
 </section>
