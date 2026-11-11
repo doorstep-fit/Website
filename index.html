@@ -48,6 +48,12 @@ section[id],#how{scroll-margin-top:110px}
   2%, 18% { visibility: visible; opacity: 1; }
   20%, 100% { visibility: hidden; opacity: 0; }
 }
+#problem .benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#problem article { background: #103a52; color: var(--ink); }
+#problem article p { color: inherit; }
+@media (max-width: 480px) {
+  #problem .benefit-grid { grid-template-columns: minmax(0, 1fr); }
+}
 </style>
 </head>
 <body id="top">
@@ -76,14 +82,14 @@ section[id],#how{scroll-margin-top:110px}
 </div>
 </section>
 </div>
-<div class="ribbon"><div class="wrap">AT-HOME COACHING <span>✦</span> LIVE ONLINE SESSIONS <span>✦</span> SOLO OR WITH A PARTNER</div></div>
+<div class="ribbon"><div class="wrap">AT YOUR DOORSTEP <span>✦</span> LIVE ONLINE SESSIONS <span>✦</span> SOLO OR WITH A PARTNER</div></div>
 <section class="wrap section" id="problem">
-<p class="eyebrow">WHY TRAIN AT HOME</p><h2>Make fitness easier to fit in.</h2>
-<div class="grid four">
-<article><h3>A packed schedule</h3><p>Build your sessions around the time you already have.</p></article>
-<article><h3>A long commute</h3><p>Set aside the time you would spend travelling and use it to move.</p></article>
-<article><h3>Too many routines</h3><p>Start with movements that suit your experience and available equipment.</p></article>
-<article><h3>Hard to stay consistent</h3><p>Choose a regular time and a goal you can revisit as you progress.</p></article>
+<h2>Make fitness easier to fit in.</h2>
+<div class="grid benefit-grid">
+<article><h3>Busy schedule?</h3><p>Your workouts, planned around your day.</p></article>
+<article><h3>No time to travel?</h3><p>Get personal training at home.</p></article>
+<article><h3>New to fitness?</h3><p>Start with guidance at every step.</p></article>
+<article><h3>Struggling to stay consistent?</h3><p>Get coaching and stay accountable.</p></article>
 </div>
 </section>
 <section class="wrap section" id="how-it-works">
