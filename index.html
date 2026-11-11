@@ -27,6 +27,15 @@ section[id],#how{scroll-margin-top:110px}
 .hero-scene { position: relative; isolation: isolate; overflow: hidden; background: #101820; }
 .hero-background { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
 .hero-scene::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,24,32,.94), rgba(16,24,32,.62)); z-index: -1; }
+.hero-art {
+  justify-self: center;
+  width: min(100%, 266px);
+  min-height: 0;
+  aspect-ratio: 9 / 16;
+  box-sizing: content-box;
+  max-width: calc(100% - 2px);
+}
+.hero-art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 </style>
 </head>
 <body id="top">
