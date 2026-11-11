@@ -276,7 +276,7 @@ section[id],#how{scroll-margin-top:110px}
 </div>
 </section>
 <section class="wrap section booking" id="contact">
-<div><h2>Make a plan<br>to move.</h2><p>Send your enquiry to Doorstep Fitness on WhatsApp.</p><div class="contact-cards">
+<div><h2>Make a plan<br>to move.</h2><p>Send your enquiry and we’ll contact you to discuss your training goals.</p><div class="contact-cards">
   <article>
     <span class="contact-icon" aria-hidden="true">📞</span>
     <div><h3>Phone</h3><p><a href="tel:+917286023821">+91 7286 023 821</a></p></div>
@@ -297,7 +297,7 @@ section[id],#how{scroll-margin-top:110px}
 <a class="button whatsapp-link" href="https://wa.me/917286023821?text=Hi%20Doorstep.Fit!%0A%0AI%E2%80%99m%20interested%20in%20your%20personal%20training%20services."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 11.7a8.8 8.8 0 0 1-13 7.8L3 21l1.5-4.7a8.8 8.8 0 1 1 16.3-4.6Z"/><path fill="currentColor" stroke="none" d="M9.1 7.2c-.4-.5-1.2-.4-1.5.1-.6.8-.6 1.8 0 3 1 2.3 3 4.3 5.4 5.3 1.1.5 2.3.4 3-.4.4-.4.5-1.1 0-1.4l-1.8-.9c-.4-.2-.7-.1-1 .2l-.5.7c-1.5-.6-2.7-1.8-3.3-3.3l.7-.6c.3-.2.4-.5.2-.9Z"/></svg> Chat on WhatsApp</a>
 <a class="button instagram-link" href="https://www.instagram.com/doorstep.fit?srtk=c2N1NTZ2dGFwaGpj&amp;utm_source=qr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Follow on Instagram</a>
 </div>
-<form id="consultation">
+<form id="consultation" method="post" action="https://script.google.com/macros/s/AKfycbyAdSL5LubOElupniZcZROy2zvumiRTw-rOKhMGOkgI2WS0_V3WdN3lEYlbpZBa8S90/exec">
 <label>Name<input name="name" autocomplete="name" required></label>
 <label>Phone number<input type="tel" name="phone" autocomplete="tel" maxlength="25" required></label>
 <label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly Pack</option><option>3 Months Pack</option><option>Couple pack</option><option>Couple pack (3 months)</option></select></label>
@@ -310,24 +310,6 @@ section[id],#how{scroll-margin-top:110px}
 <footer class="wrap footer"><a class="brand" href="#top">TheDoorStep<span class="accent">.fit</span></a><div><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="#top">Back to top ↑</a></div></footer>
 <a href="#top" class="top-link" aria-label="Back to top">↑</a>
 <script>
-const consultationForm = document.querySelector('#consultation');
-consultationForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const fields = new FormData(consultationForm);
-  const body = encodeURIComponent([
-    'Hello Doorstep Fitness,',
-    '',
-    'I would like to discuss a fitness consultation.',
-    '',
-    'Name: ' + fields.get('name'),
-    'Phone number: ' + fields.get('phone').trim(),
-    'Training option: ' + fields.get('plan'),
-    'Goal: ' + fields.get('goal'),
-    'Preferred time: ' + fields.get('time'),
-  ].join('\r\n'));
-  window.location.href = 'https://wa.me/917286023821?text=' + body;
-});
 const mobileMenu = document.querySelector('.mobile-nav');
 mobileMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => { mobileMenu.open = false; });
