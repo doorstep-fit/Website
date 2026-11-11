@@ -299,7 +299,7 @@ section[id],#how{scroll-margin-top:110px}
 </div>
 <form id="consultation">
 <label>Name<input name="name" autocomplete="name" required></label>
-<label>Neighbourhood or PIN code for WhatsApp (optional)<input name="area" maxlength="100" placeholder="e.g. Kondapur"></label>
+<label>Phone number<input type="tel" name="phone" autocomplete="tel" maxlength="25" required></label>
 <label>Training option<select id="plan" name="plan"><option>Help me choose</option><option>Trial session</option><option>Monthly Pack</option><option>3 Months Pack</option><option>Couple pack</option><option>Couple pack (3 months)</option></select></label>
 <label>Goal<select name="goal"><option>Build strength</option><option>Improve general fitness</option><option>Weight management</option><option>Build a regular routine</option><option>Improve mobility and flexibility</option><option>Post-injury recovery</option></select></label>
 <label>Preferred time<select name="time"><option>Flexible</option><option>Early morning</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label>
@@ -322,7 +322,7 @@ consultationForm.addEventListener('submit', (event) => {
     'I would like to discuss a fitness consultation.',
     '',
     'Name: ' + fields.get('name'),
-    'Neighbourhood or PIN code: ' + (fields.get('area').trim() || 'To be discussed'),
+    'Phone number: ' + fields.get('phone').trim(),
     'Training option: ' + fields.get('plan'),
     'Goal: ' + fields.get('goal'),
     'Preferred time: ' + fields.get('time'),
