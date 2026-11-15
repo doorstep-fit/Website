@@ -38,7 +38,7 @@ section[id],#how{scroll-margin-top:110px}
   visibility: hidden;
 }
 .hero-quotes span:first-child { visibility: visible; }
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference), (min-width: 851px) {
   .hero-quotes span {
     animation: hero-quote 10s linear var(--quote-delay) infinite;
   }
@@ -186,7 +186,7 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
   from { transform: translateX(calc((100cqw - 100%) / 2)); }
   to { transform: translateX(-100%); }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference), (min-width: 851px) {
   .site-banner span {
     display: block;
     width: max-content;
