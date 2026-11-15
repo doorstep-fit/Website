@@ -348,6 +348,31 @@ main > .wrap.section > h2 {
 .floating-whatsapp { width: 48px; height: 48px; background: #137642; color: #fff; }
 .floating-whatsapp:hover { background: #0e6236; color: #fff; }
 .floating-whatsapp svg { width: 26px; height: 26px; }
+/* Training process connectors */
+#how-it-works .steps { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+#how-it-works .steps li { position: relative; min-height: 0; }
+#how-it-works .steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 28px;
+  width: 2px;
+  height: 23px;
+  background: #805600;
+}
+#how-it-works .training-options-action .button { width: 100%; text-align: center; }
+@media (min-width: 1000px) {
+  #how-it-works .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  #how-it-works .steps li:not(:last-child)::after {
+    top: calc(50% - 8px);
+    left: calc(100% + 5px);
+    width: 22px;
+    height: 16px;
+    clip-path: polygon(0 43%, 69% 43%, 69% 0, 100% 50%, 69% 100%, 69% 57%, 0 57%);
+  }
+  #how-it-works .training-options-action { justify-content: center; }
+  #how-it-works .training-options-action .button { width: auto; }
+}
 </style>
 </head>
 <body id="top">
