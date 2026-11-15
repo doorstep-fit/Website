@@ -143,6 +143,36 @@ section[id],#how{scroll-margin-top:110px}
 .plan-grid article { background: #1b2922; color: #fff; border-color: #34453a; --muted: #d2ddd4; }
 input, select { background: #fbfcf9; border-color: #dfe5dc; }
 .contact-icon { background: #eff7e6; }
+.site-banner { font-size: 12px; }
+.site-header nav, .site-header .button, .button, .faq-list summary { font-size: 13px; }
+.mobile-nav summary { font-size: 25px; }
+.hero h1 { font-size: clamp(42px, 5.5vw, 70px); }
+.hero p { font-size: 16px; }
+main h2 { font-size: clamp(30px, 4vw, 46px); }
+#problem h3 { font-size: 16px; }
+.benefit-icon { font-size: 23px; }
+.steps h3 { font-size: 17px; }
+.steps li > span { font-size: 11px; }
+.services-list h3 { font-size: 18px; }
+#problem article p, .steps p, .services-list p, .plan-grid li, .faq-list p { font-size: 12px; }
+#services > p, #pricing > p { font-size: 15px; }
+.plan-grid h3, .booking label, .contact-cards h3 { font-size: 10px; }
+.plan-grid .plan-price strong { font-size: 35px; }
+.plan-grid .plan-price span, .booking input, .booking select { font-size: 12px; }
+.plan-grid li::marker { content: "✓  "; color: #b9f36a; }
+.faq-list summary::marker { content: "+  "; }
+.faq-list details[open] summary::marker { content: "−  "; }
+#contact h2 { font-size: 42px; }
+#contact h2 + p { font-size: 14px; }
+.contact-cards p { font-size: 13px; }
+.footer div a { font-size: 11px; }
+@media (max-width: 560px) {
+  .hero h1 { font-size: 46px; }
+  .hero p, #problem h3, .steps h3 { font-size: 14px; }
+  main h2 { font-size: 34px; }
+  #contact h2 { font-size: 35px; }
+  #problem article p, .steps p { font-size: 11px; }
+}
 </style>
 </head>
 <body id="top">
@@ -182,10 +212,10 @@ input, select { background: #fbfcf9; border-color: #dfe5dc; }
 <section class="wrap section" id="problem">
 <h2>Make fitness easier to fit in.</h2>
 <div class="grid benefit-grid">
-<article><h3>Busy schedule?</h3><p>Your workouts, planned around your day.</p></article>
-<article><h3>No time to travel?</h3><p>Get personal training at home.</p></article>
-<article><h3>New to fitness?</h3><p>Start with guidance at every step.</p></article>
-<article><h3>Struggling to stay consistent?</h3><p>Get coaching and stay accountable.</p></article>
+<article><span class="benefit-icon" aria-hidden="true">🗓️</span><h3>Busy schedule?</h3><p>Your workouts, planned around your day.</p></article>
+<article><span class="benefit-icon" aria-hidden="true">🏠</span><h3>No time to travel?</h3><p>Get personal training at home.</p></article>
+<article><span class="benefit-icon" aria-hidden="true">🌱</span><h3>New to fitness?</h3><p>Start with guidance at every step.</p></article>
+<article><span class="benefit-icon" aria-hidden="true">🎯</span><h3>Struggling to stay consistent?</h3><p>Get coaching and stay accountable.</p></article>
 </div>
 </section>
 <section class="wrap section" id="how-it-works">
