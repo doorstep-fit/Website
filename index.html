@@ -174,18 +174,23 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
   #problem article p, .steps p { font-size: 11px; }
 }
 @media (max-width: 560px) {
-  #problem .benefit-grid {
+  #problem .benefit-grid,
+  #how-it-works .steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
-  #problem article {
+  #problem article,
+  #how-it-works .steps li {
     min-height: 160px;
     padding: clamp(12px, 4vw, 17px);
     border-radius: 18px;
   }
-  #problem .benefit-icon { display: block; }
-  #problem h3 { margin: 17px 0 6px; }
-  #problem article p { margin: 0; color: var(--muted); }
+  #problem .benefit-icon,
+  #how-it-works .steps li > span { display: block; }
+  #problem h3,
+  #how-it-works .steps h3 { margin: 17px 0 6px; }
+  #problem article p,
+  #how-it-works .steps p { margin: 0; color: var(--muted); }
 }
 </style>
 </head>
