@@ -345,6 +345,9 @@ main > .wrap.section > h2 {
   #contact .contact-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   #contact .contact-cards article { min-height: 100px; }
 }
+.floating-whatsapp { width: 48px; height: 48px; background: #137642; color: #fff; }
+.floating-whatsapp:hover { background: #0e6236; color: #fff; }
+.floating-whatsapp svg { width: 26px; height: 26px; }
 </style>
 </head>
 <body id="top">
@@ -546,7 +549,7 @@ main > .wrap.section > h2 {
 </section>
 </main>
 <footer class="wrap footer"><a class="brand" href="#top">DoorStep<span class="accent">.fit</span></a><div><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="#top">Back to top ↑</a></div></footer>
-<a href="#top" class="top-link" aria-label="Back to top">↑</a>
+<a href="https://wa.me/916300204380?text=Hi%20Doorstep.Fit!%0A%0AI%E2%80%99m%20interested%20in%20your%20personal%20training%20services." class="top-link floating-whatsapp" aria-label="Chat with DoorStep.fit on WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 11.7a8.8 8.8 0 0 1-13 7.8L3 21l1.5-4.7a8.8 8.8 0 1 1 16.3-4.6Z"/><path fill="currentColor" stroke="none" d="M9.1 7.2c-.4-.5-1.2-.4-1.5.1-.6.8-.6 1.8 0 3 1 2.3 3 4.3 5.4 5.3 1.1.5 2.3.4 3-.4.4-.4.5-1.1 0-1.4l-1.8-.9c-.4-.2-.7-.1-1 .2l-.5.7c-1.5-.6-2.7-1.8-3.3-3.3l.7-.6c.3-.2.4-.5.2-.9Z"/></svg></a>
 <script>
 const mobileMenu = document.querySelector('.mobile-nav');
 mobileMenu.querySelectorAll('a').forEach((link) => {
