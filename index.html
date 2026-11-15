@@ -193,6 +193,11 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
     animation: banner-scroll 12s linear infinite;
   }
 }
+.plan-price del { color: var(--muted); }
+.plan-grid .plan-price strong { color: #b9f36a; }
+.discount-badge { display: inline-block; padding: 3px 8px; border-radius: 999px; background: #b9f36a; color: #14211d; font-size: 11px; font-weight: 750; vertical-align: middle; }
+.plan-grid article:has(.plan-recommendation) { border-color: #b9f36a; }
+.plan-recommendation { align-self: flex-start; }
 </style>
 </head>
 <body id="top">
@@ -280,14 +285,14 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 <div class="grid plan-grid">
 <article>
 <h3>Trial session</h3>
-<p class="plan-price"><strong>Free</strong> <span>one at-home session</span></p>
+<p class="plan-price"><del>₹500</del><br><strong>Free</strong> <small class="discount-badge">100% off</small> <span>one at-home session</span></p>
 <ul><li>Fitness assessment</li><li>Personalised workout preview</li><li>No long-term commitment</li></ul>
 
 <a class="button" href="#contact" data-plan="Trial session">Request Free Trial</a>
 </article>
 <article>
 <h3>Monthly Pack</h3>
-<p class="plan-price"><strong>₹11,999</strong> <span>per month</span></p>
+<p class="plan-price"><del>₹15,999</del><br><strong>₹11,999</strong> <small class="discount-badge">25% off</small> <span>per month</span></p>
 <ul>
   <li>16 one-to-one sessions</li>
   <li>Personalised workout plans</li>
@@ -304,7 +309,7 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 </article>
 <article>
 <h3>3 Months Pack</h3>
-<p class="plan-price"><strong>₹27,999</strong> <span>for 3 months</span></p>
+<p class="plan-price"><del>₹36,000</del><br><strong>₹27,999</strong> <small class="discount-badge">22% off</small> <span>for 3 months</span></p>
 <ul>
   <li>48 one-to-one sessions</li>
   <li>Personalised workout plans</li>
@@ -320,8 +325,8 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 <a class="button" href="#contact" data-plan="3 Months Pack">Select This Plan</a>
 </article>
 <article>
-<h3>Couple pack</h3>
-<p class="plan-price"><strong>₹17,999</strong> <span>per month</span></p>
+<h3>Couple pack</h3><p class="discount-badge plan-recommendation">Highly recommended</p>
+<p class="plan-price"><del>₹23,999</del><br><strong>₹17,999</strong> <small class="discount-badge">25% off</small> <span>per month</span></p>
 <ul>
   <li>16 sessions for two people</li>
   <li>Personalised workout plans</li>
