@@ -320,8 +320,14 @@ main > .wrap.section > h2 {
 #contact form { border-radius: 18px; }
 #contact form .button { width: 100%; }
 @media (min-width: 1000px) {
-  #faq { display: grid; grid-template-columns: minmax(240px, 1fr) minmax(0, 2fr); align-items: start; gap: 32px; }
-  #faq .faq-list details:first-child { margin-top: 0; }
+  #faq .faq-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 12px 20px;
+    max-width: none;
+  }
+  #faq .faq-list details { margin-top: 0; }
 }
 @media (max-width: 480px) {
   .hero-scene .actions { display: grid; grid-template-columns: minmax(0, 1fr); }
