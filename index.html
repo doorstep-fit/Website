@@ -206,6 +206,9 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 }
 .plan-grid .plan-price .plan-price-offer { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
 .plan-price .discount-badge { background-color: #16432e; color: #8ff0ae; text-transform: uppercase; flex: none; font-family: Arial, sans-serif; letter-spacing: 0.04em; font-kerning: none; }
+.trial-header { text-align: center; padding: 0 12px 8px; }
+.trial-header .discount-badge { text-decoration: none; }
+.trial-header .discount-badge:hover { color: #14211d; }
 </style>
 </head>
 <body id="top">
@@ -216,7 +219,8 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 <a href="#how-it-works">How it works</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
 </nav>
 <a class="button small" href="#contact">Get Started Today</a>
-</header></div>
+</header>
+<div class="trial-header"><a class="discount-badge" href="#pricing">Limited Free Trial Offer</a></div></div>
 <main id="main">
 <script>
   const landingHeader = document.querySelector('.site-header');
@@ -293,6 +297,7 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 <div class="grid plan-grid">
 <article>
 <h3>Trial session</h3>
+<p class="discount-badge plan-recommendation">Limited Free Trial Offer</p>
 <p class="plan-price"><span class="plan-price-offer"><del>₹500</del> <small class="discount-badge">100% off</small></span><strong>Free</strong> <span>one at-home session</span></p>
 <ul><li>Fitness assessment</li><li>Personalised workout preview</li><li>No long-term commitment</li></ul>
 
