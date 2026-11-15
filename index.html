@@ -193,19 +193,19 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
     animation: banner-scroll 12s linear infinite;
   }
 }
-.plan-price del { color: var(--muted); }
+.plan-price del { color: #ff9292; }
 .plan-grid .plan-price strong { color: #b9f36a; }
 .discount-badge { display: inline-block; padding: 3px 8px; border-radius: 999px; background: #b9f36a; color: #14211d; font-size: 11px; font-weight: 750; vertical-align: middle;  letter-spacing: normal; line-height: 1.4; white-space: nowrap; }
 .plan-grid article:has(.plan-recommendation) { border-color: #b9f36a; }
 .plan-recommendation { align-self: flex-start; }
 @keyframes pricing-badge-pulse {
-  50% { background-color: #263d2c; color: #fff; box-shadow: 0 0 0 2px #b9f36a; }
+  50% { background-color: #437738; color: #fff; box-shadow: 0 0 0 2px #b9f36a; }
 }
 @media (prefers-reduced-motion: no-preference), (min-width: 851px) {
   .discount-badge { animation: pricing-badge-pulse 2s ease-in-out infinite; }
 }
 .plan-grid .plan-price .plan-price-offer { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
-.plan-price .discount-badge { flex: none; font-family: Arial, sans-serif; letter-spacing: 0.04em; font-kerning: none; }
+.plan-price .discount-badge { background-color: #16432e; color: #8ff0ae; text-transform: uppercase; flex: none; font-family: Arial, sans-serif; letter-spacing: 0.04em; font-kerning: none; }
 </style>
 </head>
 <body id="top">
@@ -293,14 +293,14 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 <div class="grid plan-grid">
 <article>
 <h3>Trial session</h3>
-<p class="plan-price"><del>₹500</del><br><span class="plan-price-offer"><strong>Free</strong> <small class="discount-badge">100% off</small></span> <span>one at-home session</span></p>
+<p class="plan-price"><span class="plan-price-offer"><del>₹500</del> <small class="discount-badge">100% off</small></span><strong>Free</strong> <span>one at-home session</span></p>
 <ul><li>Fitness assessment</li><li>Personalised workout preview</li><li>No long-term commitment</li></ul>
 
 <a class="button" href="#contact" data-plan="Trial session">Request Free Trial</a>
 </article>
 <article>
 <h3>Monthly Pack</h3>
-<p class="plan-price"><del>₹15,999</del><br><span class="plan-price-offer"><strong>₹11,999</strong> <small class="discount-badge">25% off</small></span> <span>per month</span></p>
+<p class="plan-price"><span class="plan-price-offer"><del>₹15,999</del> <small class="discount-badge">25% off</small></span><strong>₹11,999</strong> <span>per month</span></p>
 <ul>
   <li>16 one-to-one sessions</li>
   <li>Personalised workout plans</li>
@@ -317,7 +317,7 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 </article>
 <article>
 <h3>3 Months Pack</h3>
-<p class="plan-price"><del>₹48,000</del><br><span class="plan-price-offer"><strong>₹27,999</strong> <small class="discount-badge">42% off</small></span> <span>for 3 months</span></p>
+<p class="plan-price"><span class="plan-price-offer"><del>₹48,000</del> <small class="discount-badge">42% off</small></span><strong>₹27,999</strong> <span>for 3 months</span></p>
 <ul>
   <li>48 one-to-one sessions</li>
   <li>Personalised workout plans</li>
@@ -334,7 +334,7 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
 </article>
 <article>
 <h3>Couple pack</h3><p class="discount-badge plan-recommendation">Highly recommended</p>
-<p class="plan-price"><del>₹23,999</del><br><span class="plan-price-offer"><strong>₹17,999</strong> <small class="discount-badge">25% off</small></span> <span>per month</span></p>
+<p class="plan-price"><span class="plan-price-offer"><del>₹23,999</del> <small class="discount-badge">25% off</small></span><strong>₹17,999</strong> <span>per month</span></p>
 <ul>
   <li>16 sessions for two people</li>
   <li>Personalised workout plans</li>
