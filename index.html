@@ -373,6 +373,15 @@ main > .wrap.section > h2 {
   #how-it-works .training-options-action { justify-content: center; }
   #how-it-works .training-options-action .button { width: auto; }
 }
+@media (max-width: 999px) {
+  #how-it-works .steps li:not(:last-child)::after {
+    top: calc(100% + 2px);
+    left: calc(50% - 8px);
+    width: 16px;
+    height: 18px;
+    clip-path: polygon(40% 0, 60% 0, 60% 52%, 100% 52%, 50% 100%, 0 52%, 40% 52%);
+  }
+}
 </style>
 </head>
 <body id="top">
