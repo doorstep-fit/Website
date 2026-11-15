@@ -173,6 +173,20 @@ main h2 { font-size: clamp(30px, 4vw, 46px); }
   #contact h2 { font-size: 35px; }
   #problem article p, .steps p { font-size: 11px; }
 }
+@media (max-width: 560px) {
+  #problem .benefit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  #problem article {
+    min-height: 160px;
+    padding: clamp(12px, 4vw, 17px);
+    border-radius: 18px;
+  }
+  #problem .benefit-icon { display: block; }
+  #problem h3 { margin: 17px 0 6px; }
+  #problem article p { margin: 0; color: var(--muted); }
+}
 </style>
 </head>
 <body id="top">
