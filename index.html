@@ -119,7 +119,11 @@ section[id],#how{scroll-margin-top:110px}
   .wrap { width: auto; max-width: none; margin-inline: clamp(20px, 2vw, 40px); }
   .hero-scene .hero { grid-template-columns: minmax(0, 58%); }
   .faq-list { max-width: none; }
-  #how-it-works .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #how-it-works .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  #how-it-works .steps li { min-height: 160px; padding: 17px; border-radius: 18px; }
+  #how-it-works .steps li > span { display: block; }
+  #how-it-works .steps h3 { margin: 17px 0 6px; }
+  #how-it-works .steps p { margin: 0; color: var(--muted); }
   .services-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
