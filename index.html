@@ -392,8 +392,9 @@ main > .wrap.section > h2 {
 .footer-contact a { color: #191714; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .footer-contact-divider { color: #805600; }
 @media (max-width: 480px) {
-  .footer-contact { flex-direction: column; gap: 7px; }
-  .footer-contact-divider { width: 32px; height: 2px; background: #805600; font-size: 0; }
+  .footer-contact { flex-direction: row; flex-wrap: nowrap; gap: 6px; font-size: clamp(11px, 3.3vw, 14px); }
+  .footer-contact a { min-width: 0; }
+  .footer-contact a:first-child { white-space: nowrap; }
 }
 </style>
 </head>
